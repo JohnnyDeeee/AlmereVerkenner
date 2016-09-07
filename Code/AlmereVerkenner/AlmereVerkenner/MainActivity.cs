@@ -9,6 +9,8 @@ using Android.Hardware;
 using Android.Graphics;
 using System.IO;
 using ZXing.Mobile;
+using System.Threading.Tasks;
+using Android.Locations;
 
 namespace AlmereVerkenner
 {
@@ -39,20 +41,37 @@ namespace AlmereVerkenner
 
         private async void CaptureButton_Click(object sender, EventArgs e)
         {
-            // Capture picture
-            MobileBarcodeScanner scanner = new MobileBarcodeScanner();
-            scanner.UseCustomOverlay = false;
-            scanner.TopText = "Hold the camera up to the barcode\nAbout 6 inches away";
-            scanner.BottomText = "Wait for the barcode to automatically scan!";
-            object result = await scanner.Scan();
-            
-            // Read QR code
-            
-            
+            // Capture/Read QR code
+            object result = await ReadQRCode();
+            Toast.MakeText(this, "Result: " + result.ToString(), ToastLength.Short).Show();            
+                       
             // Check QR result with current GPS position
             
             
             // Add point if OK
+        }
+
+        private async Task<object> ReadQRCode()
+        {
+            MobileBarcodeScanner scanner = new MobileBarcodeScanner();
+            scanner.UseCustomOverlay = false;
+            scanner.TopText = "Hold the camera up to the barcode\nAbout 6 inches away";
+            scanner.BottomText = "Wait for the barcode to automatically scan!";
+            return await scanner.Scan();
+        }
+
+        private bool CompareLocation(string longitude, string latitude)
+        {
+            LocationManager locationManager = (LocationManager)GetSystemService(Context.LocationService);
+            Criteria crit = new Criteria();
+            // TODO: set criteria to acc_fine
+
+            // Check if GPS is enabled
+            if (locationManager.IsProviderEnabled(LocationManager.GpsProvider) ||
+                locationManager.IsProviderEnabled(LocationManager.NetworkProvider))
+            {
+                locationManager.RequestSingleUpdate(locationManager.GetBestProvider(), 11, null);
+            }
         }
     }
 }

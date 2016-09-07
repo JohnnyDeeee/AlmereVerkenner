@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="AlmereVerkenner.AlmereVerkenner" android:versionName="0.1" android:installLocation="auto" android:versionCode="1">
 	<uses-sdk android:minSdkVersion="14" />
 	<uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<application android:label="AlmereVerkenner" android:icon="@drawable/Icon"></application>
 	<application android:label="TextureViewCameraStream" android:hardwareAccelerated="true" />
 </manifest>

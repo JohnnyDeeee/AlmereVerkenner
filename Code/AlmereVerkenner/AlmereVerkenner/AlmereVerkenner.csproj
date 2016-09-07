@@ -62,13 +62,25 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
+    <AndroidResource Include="Resources\drawable-hdpi\hintPhoto_1.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\hintPhoto_1.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hintPhoto_1.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hintPhoto_1.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hintPhoto_1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

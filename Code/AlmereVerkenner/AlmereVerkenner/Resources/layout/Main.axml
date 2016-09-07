@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff">
+        <ImageButton
+            android:src="@drawable/menu_icon"
+            android:id="@+id/menuButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:background="#FFFFFF" />
+        <TextView
+            android:text="Points: -"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/pointsLabel"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="28sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:id="@+id/hintPhoto_Layout"
+        android:background="#a6a6a6">
+        <ImageView
+            android:src="@drawable/hintphoto_1"
+            android:id="@+id/hintPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
     <Button
-        android:text="capture"
         android:id="@+id/captureButton"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:text="Scan QR Code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4d4d4d"
+        android:textColor="#000000"
+        android:shadowColor="#000000ff" />
 </LinearLayout>

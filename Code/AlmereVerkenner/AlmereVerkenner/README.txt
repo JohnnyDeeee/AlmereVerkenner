@@ -2,12 +2,11 @@
 
 
 TODO:
+- Top bar (visible on all pages)
+	- Menu button
+	- Total points
 - Login screen
 	- Login boxes
-- Home screen
-	- Camera view
-	- Capture button
-	- Menu button
 - Shop screen
 	- Total points
 	- Shop elements (prizes)
@@ -24,7 +23,9 @@ TODO:
 Versions:
 v0.1
 - Features
-	- ...
+	- Home screen
+		- Photo of the location
+		- Button to start scanning QR code
 - Fixes
 	- ...
 - Issues
