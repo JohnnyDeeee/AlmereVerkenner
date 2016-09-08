@@ -17,8 +17,6 @@ TODO:
 	- Go to shop
 	- Go to settings
 	- Account info
-- QR Generator/Decoder
-	- Encode GPS locations
 
 Versions:
 v0.1
@@ -26,6 +24,7 @@ v0.1
 	- Home screen
 		- Photo of the location
 		- Button to start scanning QR code
+	- QR Scanner
 - Fixes
 	- ...
 - Issues
